@@ -1,7 +1,7 @@
 # sunrays
 a network/character page for tumblr
 
-<a href="/">live preview</a>
+<a href="https://index47.tumblr.com/view/sunrays">live preview</a>
 
 <b>features</b>
 
@@ -21,5 +21,9 @@ a network/character page for tumblr
   <li>google webfonts</li>
   </ul>
 
+
+<a href="/">view original post</a>
+
+let me know if there are any bugs! 
 
 
