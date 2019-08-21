@@ -1,0 +1,670 @@
+<!--
+
+
+     SUNRAYS
+
+     by farkosten | index47
+
+
+     stock images: unsplash.com
+     isotope combination filtering: magnusthemes
+     google fonts
+   
+
+ 
+-->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--- change title here --->
+    
+       <title>{Title}</title>
+      
+       <link rel="shortcut icon" href="{Favicon}">
+       <link rel="altertnate" type="application/rss+xml" href="{RSS}">
+       
+       
+
+<!--- custom fonts: google webfonts --->
+
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400,700|Rubik:400,500,700" rel="stylesheet">
+
+
+    
+    
+</head>
+<style type="text/css">
+    
+    * {  box-sizing: border-box; margin: 0; }
+    
+    html { margin: 0; overflow-x: hidden; }
+    
+    
+        ::-webkit-scrollbar {
+        width: 10px;  }
+
+    ::-webkit-scrollbar-track {
+        background-color: #bbb;
+        border-left:4px solid #eee;
+        border-right:5px solid #eee;
+        border-top:0;   }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #000; 
+        border-left:4px solid #eee;
+        border-right:5px solid #eee;
+        border-top:0; border-bottom: 0;   }
+    
+    
+    
+    .tmblr-iframe.tmblr-iframe--desktop-logged-in-controls.iframe-controls--desktop,
+    #tumblr_controls{
+        position:fixed!important;
+        top:8px!important;
+        transform:scale(.9);
+        -webkit-transform:scale(.9);
+        -moz-transform:scale(.9);
+        z-index:9999!important;
+         filter:invert(100%);
+       -webkit-filter:invert(100%);
+       -moz-filter:invert(100%);
+        -ms-filter:invert(100%);
+        -o-filter:invert(100%);
+}
+
+    
+    body {
+        background-color:#eee;
+        font-size:12px;
+        font-family: 'Rubik', serif;
+        font-weight:400;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; 
+    }
+    
+    
+    a { 
+        text-decoration: none; 
+        color:#000; 
+     -webkit-transition:all .2s linear;
+       transition:all .2s linear;  }
+    
+    a:hover { 
+        color:#666;
+        -webkit-transition:all .2s linear;
+       transition:all .2s linear;  }
+    
+    
+    
+    /* content */
+    
+    
+    
+    #wrap {
+        width:100%;   }
+    
+    
+    
+    #top {
+        position: fixed;
+        width:calc(100% - 150px); 
+        top:0;
+        margin: 50px 0 0 50px;
+    }
+    
+    #top h3 {
+        display: block;
+        font-weight: 700;
+        font-size:24px;
+        color:#222;
+        font-family: 'Volkhov', serif;
+    } 
+    
+    
+    #top nav {
+        display: block;
+        margin: 10px 0 0 0;   }
+    
+    #top a {
+        color: #999;
+        text-transform: lowercase;
+        font-size:12px;   }
+    
+    
+    /* filtering */
+    
+    aside {
+        position: fixed;
+        top:0;
+        left: 0;
+        width:100px;
+        border-top: 5px solid #d9c300; }
+    
+    
+    #nav {
+        margin:11vh 0 0 50px;    }
+    
+    #filters {
+        margin:65px 0;    }
+    
+    
+    #filters h1 {
+        display: inline-block;
+        font-family: 'Volkhov', serif;
+        font-size: 13px;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        border-bottom: 2px solid white;
+        padding: 0 0 5px 0;
+        margin: 30px 0 20px 0;
+    }
+    
+    *:focus {outline:0 !important;}
+
+    .button {
+        display:block; 
+        border:none;
+        cursor: crosshair;
+        padding: 0px 0;
+        border-bottom: 3px solid transparent;
+        margin: 5px 0;
+        background-color: transparent;
+        -webkit-transition:all .2s linear;
+       transition:all .2s linear; }
+
+    .button:hover {
+        -webkit-transition:all .2s linear;
+       transition:all .2s linear; }
+
+    .button.active, .button.is-checked {
+        font-weight: 700;
+        border-bottom: 3px solid #d9c300;
+    }
+
+    .button-group { 
+        display:block; 
+        vertical-align:top;   }
+
+    
+    
+    /* masterlist */
+    
+    
+    #ml {
+        width:calc(100% - 170px); 
+        margin: 11vh 0 10vh 170px;
+    }
+    
+    
+    
+    .box {
+        display: inline-block;
+        float: left;
+        width:360px;
+        height: 400px;
+        cursor: crosshair;
+        overflow: hidden;
+    }
+
+    .ph {
+        display: block;
+        float: right;
+        width:250px;
+        height: 350px;
+        background-color: #666;
+        overflow: hidden;
+    }
+    
+    
+    .ph img {
+        width:100%;
+    }
+    
+    
+    
+    .nm {
+        position: absolute;
+        height: 350px;
+        z-index: 6;
+    }
+    
+    .nm h2 {
+        position: absolute;
+        text-align: left;
+        width:250px;
+        padding: 0 0 50px 50px;
+        bottom: 0;
+        color: #d9c300;
+        font-family: 'Volkhov', serif;
+        font-weight: 400;
+        font-size:45px;  
+        text-decoration: underline;
+        text-decoration-color:#fff;
+        z-index: 6;
+        -webkit-transition:all .2s linear;
+       transition:all .2s linear;
+         transition-delay: .1s;
+    }
+    
+    
+    .box.show .nm h2 {
+        margin-bottom:160px;
+        -webkit-transition:all .2s linear;
+       transition:all .2s linear;
+    }
+    
+    
+    .txt {
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        width:230px;
+        height: 155px;
+        overflow: auto;
+        margin: 0 0 40px 70px;
+        font-size:13px;
+        padding: 25px;
+        line-height: 150%;
+        background-color: #d9c300;
+        color:white;
+        z-index: 5;
+        -webkit-transition:all .1s linear;
+        transition:all .1s linear; }
+    
+     .box.show .txt {
+        opacity: 1;
+         -webkit-transition:all .1s linear;
+       transition:all .1s linear;
+         transition-delay: .1s;
+    }
+   
+   
+     .txt::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .txt::-webkit-scrollbar-track {
+        background-color: #d9c300;
+        border-left:4px solid #e0d3de;
+        border-top:0;
+    }
+
+    .txt::-webkit-scrollbar-thumb {
+        background-color: #000; 
+        border-left:1px solid #d9c300;
+        border-right:1px solid #d9c300;
+        border-top:0; border-bottom: 0;
+    }
+    
+    
+    .lnx {
+        display: block;
+        font-size:9px;
+        margin: 10px 0 0 0;
+        color: #fff;
+    }
+    
+    .lnx a { color: #000; font-weight: 500; padding:0 5px; font-size:10px; }
+    
+    
+    #cre a {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 20px;
+        color:black;
+        font-weight: 700;
+        padding:5px;
+        border:1px solid #d9c300;
+        border-radius: 100%;
+        font-size:10px; }
+    
+    
+    
+    
+    
+/*    HOW TO CHANGE COLORS
+      ---------------------
+    
+      to change the yellow accent, 
+      search for "#d9c300"  and change the hex code.
+      
+    
+/*    HOW TO CHANGE CATEGORY COLORS
+      ---------------------
+    
+      the second group of filters can be given colors
+      each class (ie. .one, .two) has the default yellow
+    
+      using the same method as above,
+      find #d9c300 below and change accordingly.
+    
+*/
+
+   /* changes every character (unless you assign specific colors) */
+   
+    .nm h2 {
+        color: #d9c300;
+        text-decoration: underline;
+        text-decoration-color:#fff;
+    }
+    
+    
+    /* changes the characters of class .one */
+    
+    .one .nm h2 {
+        color: #d9c300;
+        text-decoration: underline;
+        text-decoration-color:#fff;
+    }
+    
+    /* changes the characters of class .two */
+    
+    .two .nm h2 {
+        color: #d9c300;
+        text-decoration: underline;
+        text-decoration-color:#fff;
+    }
+    
+    /* changes the characters of class .three */
+    
+    .three .nm h2 {
+        color: #d9c300;
+        text-decoration: underline;
+        text-decoration-color:#fff;
+    }
+    
+    /* changes the characters of class .four */
+    
+    .four .nm h2 {
+        color: #d9c300;
+        text-decoration: underline;
+        text-decoration-color:#fff;
+    }
+    
+    /* 
+       
+       you can create other classes, like this:
+       
+       .five .nm h2 {
+        color: #d9c300;
+        text-decoration: underline;
+        text-decoration-color:#fff; }
+    
+    */
+    
+    
+    </style>
+    <body>
+        
+        
+<section id="wrap">
+            
+
+    <!-- header -->
+    <article id="top">
+               
+        
+                <!-- page title --> 
+                <h3>characters</h3>
+
+
+                <!-- return button -->
+                <nav> <a href="/">return</a> </nav>
+
+    </article>
+        
+            
+        
+    <!-- header -->
+<aside id="nav">               
+                
+
+    <div id="filters">
+                    
+                
+            <!-- group 1 -->
+            <div class="button-group" data-filter-group="group1">
+                
+                <!-- group 1 title -->
+                <h1>status</h1>
+                
+                <!-- group 1 categories -->
+                
+                <button class="button active" data-filter="">all</button>
+                <button class="button" data-filter=".red">open</button>
+                <button class="button" data-filter=".green">closed</button>
+                <button class="button" data-filter=".blue">npc</button>
+                
+            </div>
+    
+    
+            <!-- group 2 -->
+            <div class="button-group" data-filter-group="group2">
+                
+                <!-- group 2 title -->
+                <h1>group</h1>
+
+                <!-- group 1 categories -->
+                
+                <button class="button active" data-filter="">all</button>
+                <button class="button" data-filter=".one">one</button>
+                <button class="button" data-filter=".two">two</button>
+                <button class="button" data-filter=".three">three</button>
+                <button class="button" data-filter=".four">four</button>
+                
+            </div>
+    
+    
+    
+<!---           HOW TO ADD NEW CATEGORIES
+
+                1. create a new button:
+ 
+                   <button class="button" data-filter=".class">category</button>
+
+                2. replace ".class" (ie. ".c", ".five")
+                3. rename the category
+
+                --------------------------------
+                
+                HOW TO CREATE A NEW GROUP        
+
+                1. create a new group:
+
+                    <div class="button-group" data-filter-group="group3">
+
+                        <h1>GROUP NAME</h1>
+
+                        <button class="button active" data-filter="">all</button>
+                        <button class="button" data-filter=".red">red</button>
+                        <button class="button" data-filter=".blue">blue</button>
+                        <button class="button" data-filter=".green">green</button>
+                        <button class="button" data-filter=".yellow">yellow</button>
+
+                    </div>
+
+                2. change "group3" as you add more (ie. group4, group5, etc.)
+
+
+                IMPORTANT: DO NOT REPEAT CLASSES
+
+--> 
+                
+<!---       put your new groups between these borders         ---> 
+                
+                
+                
+                
+                
+
+                
+
+<!---       put your new groups between these borders         --->     
+        
+        
+
+    </div>
+    
+</aside>
+            
+            
+<article id="ml">
+            
+
+    
+    
+    
+    <!------   CHARACTER   ------>
+    
+    <!---   
+         change/add categories here // do not remove the "box" class
+    ---> 
+    <div class="box red one"> 
+                    
+    <!---   name   ---> 
+    <div class="nm">
+        
+        <h2> aurora<br> borealis </h2>
+        
+        
+    <!---   text   ---> 
+    <div class="txt">
+                    
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis pellentesque nulla. Vivamus ornare.
+              
+        
+        <!---   links   --->  
+        <div class="lnx">
+
+            <a href="/">BIO</a>   /   <a href="/">TAG</a>
+
+        </div>
+        
+    </div>
+    </div>
+        
+        
+    <!---   image   --->  
+    <div class="ph">
+                        
+         <img src="https://static.tumblr.com/hmcdpox/G7Gpwjnb8/untitled-2.png">
+                     
+    </div>
+        
+        
+    </div>
+    <!------   CHARACTER END   ------>
+    
+    
+    
+    
+            
+    
+    
+</article>
+            
+            
+            
+            
+        
+        
+        
+</section>
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+        
+<div id="cre"><a href="https://index47.tumblr.com/">47</a></div>
+     
+        
+        
+        
+        
+        
+        <!--- JAVASCRIPT - TRY NOT TO ALTER --->
+       
+       
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+        
+        
+<script type="text/javascript">
+    
+        $(document).ready( function() {
+ // init Isotope
+ var $grid = $('#ml').isotope({
+   itemSelector: '.box'
+ });
+
+ // store filter for each group
+ var filters = {};
+
+ $('#filters').on( 'click', '.button', function() {
+   var $this = $(this);
+   // get group key
+   var $buttonGroup = $this.parents('.button-group');
+   var filterGroup = $buttonGroup.attr('data-filter-group');
+   // set filter for group
+   filters[ filterGroup ] = $this.attr('data-filter');
+   // combine filters
+   var filterValue = concatValues( filters );
+   // set filter for Isotope
+   $grid.isotope({ filter: filterValue });
+ });
+
+ // change is-checked class on buttons
+ $('.button-group').each( function( i, buttonGroup ) {
+   var $buttonGroup = $( buttonGroup );
+   $buttonGroup.on( 'click', 'button', function() {
+     $buttonGroup.find('.active').removeClass('active');
+     $( this ).addClass('active');
+   });
+ });
+
+});
+
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
+});
+
+// flatten object by concatting values
+function concatValues( obj ) {
+ var value = '';
+ for ( var prop in obj ) {
+   value += obj[ prop ];
+ }
+ return value;
+}
+
+    
+</script>
+        
+<script>
+       
+  $(document).ready(function() {
+      $(".box").click(function(){
+    $('.box').not(this).removeClass('show');
+    $(this).toggleClass('show');
+ })
+     
+    });
+        
+
+</script>
+
+    </body>
+</html>
