@@ -22,7 +22,7 @@ a network/character page for tumblr
   </ul>
 
 
-<a href="/">view original post</a>
+<a href="https://index47.tumblr.com/post/187166552862/sunrays-a-networkcharacter-page-preview">view original post</a>
 
 let me know if there are any bugs! 
 
