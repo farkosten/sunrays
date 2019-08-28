@@ -8,7 +8,6 @@
 
      stock images: unsplash.com
      isotope combination filtering: magnusthemes
-     google fonts
    
 
  
@@ -107,14 +106,19 @@
     
     
     
-    #top {
-        position: fixed;
-        width:calc(100% - 150px); 
-        top:0;
-        margin: 50px 0 0 50px;
-    }
     
-    #top h3 {
+    
+    /* filtering */
+    
+    #side {
+        position: fixed;
+        top:0;
+        left: 0;
+        margin: 45px 0 0 45px;
+        width:100px; }
+    
+    
+    #side h3 {
         display: block;
         font-weight: 700;
         font-size:24px;
@@ -123,31 +127,24 @@
     } 
     
     
-    #top nav {
+    
+    #side nav {
         display: block;
         margin: 10px 0 0 0;   }
+
     
-    #top a {
+    #side nav a {
         color: #999;
         text-transform: lowercase;
         font-size:12px;   }
     
     
-    /* filtering */
     
-    aside {
-        position: fixed;
-        top:0;
-        left: 0;
-        width:100px;
-        border-top: 5px solid #d9c300; }
-    
-    
-    #nav {
-        margin:11vh 0 0 50px;    }
     
     #filters {
-        margin:65px 0;    }
+        margin:35px 0;    
+        padding-top:45px;
+        border-top: 5px solid #d9c300;  }
     
     
     #filters h1 {
@@ -401,28 +398,21 @@
         
         
 <section id="wrap">
-            
-
-    <!-- header -->
-    <article id="top">
-               
+    
+    
+    <article id="side">
         
-                <!-- page title --> 
+        
+        <!-- page title --> 
                 <h3>characters</h3>
 
 
-                <!-- return button -->
+        <!-- return button -->
                 <nav> <a href="/">return</a> </nav>
-
-    </article>
         
-            
         
-    <!-- header -->
-<aside id="nav">               
-                
-
-    <div id="filters">
+        
+        <div id="filters">
                     
                 
             <!-- group 1 -->
@@ -508,7 +498,13 @@
 
     </div>
     
-</aside>
+    </article>
+            
+
+    
+        
+            
+
             
             
 <article id="ml">
