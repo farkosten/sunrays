@@ -27,3 +27,4 @@ a network/character page for tumblr
 let me know if there are any bugs! 
 
 
+<b>8/28/19</b>: updated code to accomodate for different screen resolutions
